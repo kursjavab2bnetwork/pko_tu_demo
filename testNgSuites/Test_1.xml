@@ -1,0 +1,23 @@
+<suite name="Test_1">
+    <parameter name="url" value="https://twojapolisa.pkoubezpieczenia.pl/kupuje/produkt/takpodrozuje.html"/>
+    <parameter name="driverPath" value="src\\main\\resources\\Geckodriver.exe"/>
+    <parameter name="excelPath" value="C:\\skladkaTDmz1.xls"/>
+
+
+    <test name="Uruchomienie srodowiska testowego">
+        <classes>
+            <class name="pl.b2b.net.pko_tests.cfg.CfgTest">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="openSite"/>
+                </methods>
+            </class>
+            <class name="pl.b2b.net.pko_tests.apps.tests.TravelOptionTest">
+                <methods>
+                    <include name="init"/>
+                    <include name="yourJourneyTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
